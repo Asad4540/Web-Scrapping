@@ -1,5 +1,9 @@
 This code creates a web application using Flask, a popular web framework for Python. The application allows users to upload an Excel file containing URLs, scrape specific content from those URLs, and then download the results in a zip file. Here is a breakdown of the code:
 
+Dependencies Installation
+pip install flask requests beautifulsoup4 pandas openpyxl
+pip install lxml
+
 Setup
 Imports: The code imports several libraries, including Flask for the web application, requests and BeautifulSoup for web scraping, pandas for handling Excel files, os for file handling, lxml for XML and HTML parsing, and zipfile for creating zip files.
 Flask App Configuration: The Flask app is created and configured with folders for uploading and downloading files, as well as a secret key for session management.
@@ -36,6 +40,7 @@ File Upload Handling: The /upload route handles file uploads, checks the file ty
 Web Scraping and HTML Updating: The /scrape/<filename> route handles the core functionality of scraping content from URLs, updating an HTML template, and creating a zip file.
 File Download: The /download_zip/<filename> route allows users to download the generated zip file.
 Image Downloading: The download_image function downloads images from URLs and saves them to specified paths.
+
 Running the Application
 To run this application, save the code in a Python file (e.g., app.py) and run it using the command python app.py. Ensure you have all required libraries installed, which you can do using pip install flask requests beautifulsoup4 pandas lxml.
 
